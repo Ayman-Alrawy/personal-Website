@@ -1,0 +1,129 @@
+<!-- HTML FILE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayman's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1>Aymen Al-Rawe Portfolio</h1>
+    <p>I’m a Computer Science enthusiast dedicated to building skills in programming and problem-solving through hands-on projects and continuous learning.</p>
+    <button onclick="window.location.href='#projects'">View My Work</button>
+</div>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="cards">
+        <a href="https://aymen-tic-tac-toe-game.netlify.app/" class="card-link"><div class="card">
+            <h3>Tic Tac Toe Game</h3>
+            <img src="images/tic.png" alt="Tic Tac Toe Game">
+            <p>A classic game built using HTML, CSS, and JavaScript. Showcases logic and design skills.</p>
+        </div></a>
+        <a href="https://aymen-leon-creative-agency.netlify.app/" class="card-link">
+        <div class="card">
+            <h3>Responsive Company Website</h3>
+            <img src="images/leon.png" alt="Company Website">
+            <p>A company website built using HTML and CSS, with a UI design by Graphberry. I focused on coding the layout and structure to create a clean, responsive site.</p>
+        </div></a>
+        <a href="https://aymen-snake-game.netlify.app/" class="card-link">
+        <div class="card">
+            <h3>Snake Game</h3>
+            <img src="images/snake.png" alt="Personal Portfolio">
+            <p>A simple Snake game created with HTML, CSS, and JavaScript. It features classic gameplay where the snake grows as it collects food, avoiding walls and its own tail.</p>
+        </div></a>
+    </div>
+</section>
+
+<section id="certificates" class="section certificates-section">
+    <h2>Certificates</h2>
+    <div class="cards">
+        <a href="https://coursera.org/verify/4LLX9295QQU4" class="card-link">
+        <div class="card">
+            <h3>Learn How to Learn</h3>
+            <img src="/images/Learn.jpg" alt="Learn How to Learn Certificate">
+            <p>A Coursera course teaching effective learning strategies.</p>
+        </div></a>
+        <a href="https://coursera.org/verify/specialization/7MMLYMU4QL5R" class="card-link">
+        <div class="card">
+            <h3>Soft Skills Specialization</h3>
+            <img src="images/People.jpg" alt="Soft Skills Specialization Certificate">
+            <p>A professional certification focused on communication, teamwork, and leadership.</p>
+        </div></a>
+        
+        <div class="card">
+            <h3>Front-End Development</h3>
+            <div class="certificate-slider">
+                <img src="images/htss.png" alt="Front-End Development Certificate 1" class="slider-image">
+                <img src="images/jsb.png" alt="Front-End Development Certificate 2" class="slider-image">
+                <img src="images/jsad.png" alt="Front-End Development Certificate 3" class="slider-image">
+                <img src="images/git.png" alt="Front-End Development Certificate 4" class="slider-image">
+            </div>
+            <p>Completed courses on HTML, CSS, JavaScript and git basics.</p>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Technical Skills</h3>
+            <p>Programming Languages: HTML, CSS, JavaScript <br>
+                Operating Systems: Linux (Basic command line usage)
+        </div>
+        <div class="card" class="mul">
+            <h3>Multilingual</h3>
+            <p>Arabic: Native |
+                English: Advanced (C1) | 
+                German: Intermediate (B1)
+                </p>
+        </div>
+        <div class="card">
+            <h3>Soft Skills</h3>
+            <p>Strong communication, teamwork, and problem-solving abilities, with leadership experience in initiating and guiding Englsih practice activities In my class to help peers improve their English.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>Contact me via:</p>
+    <p>Email: aymansubhi2004@gmail.com
+
+</footer>
+
+<script>
+    // JavaScript to change images every few seconds
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.certificate-slider .slider-image');
+
+    function changeImage() {
+        // Remove 'active' class from all images
+        images.forEach(img => img.classList.remove('active'));
+        
+        // Add 'active' class to the next image in the sequence
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+        images[currentIndex].classList.add('active');
+    }
+
+    // Initial image
+    images[currentIndex].classList.add('active');
+    
+    // Change image every 3 seconds
+    setInterval(changeImage, 2000); 
+</script>
+
+</body>
+</html>

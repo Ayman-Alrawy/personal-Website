@@ -1,0 +1,167 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9fb;
+    color: #333;
+}
+.card-link {
+    text-decoration: none;
+    color: black;
+  }
+/* Header Navigation */
+header {
+    background: #3b5998;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, #4a90e2, #3b5998);
+    color: white;
+    padding: 5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero button {
+    background: #f7c948;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background: #e5b635;
+}
+
+/* Section Styling */
+.section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3b5998;
+}
+
+/* Card Layout */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a90e2;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+/* Certificates Section Background */
+.certificates-section {
+    background: linear-gradient(to bottom right, #eef5ff, #d7e8ff);
+    padding: 3rem 1rem;
+    border-top: 3px solid #4a90e2;
+}
+
+/* Certificate Slider Styling */
+.certificate-slider {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+/* Footer Styling */
+.footer {
+    background: #333;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
